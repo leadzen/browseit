@@ -1,0 +1,26 @@
+{
+  "name": "browse-it",
+  "version": "0.0.1",
+  "displyName": "Browse It",
+  "description": "VS Code extension for browsing files.",
+  "publisher": "leadzen",
+  "categories": ["Other"],
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leadzen/browseit"
+  },
+  "engines": { "vscode": "^0.10.0" },
+  "main": "main.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {"command": "browse.it", "title": "Browser It"}
+    ],
+    "menus": {
+      "editor/context": [
+        {"command": "browse.it", "when": "resourceScheme == file"}
+      ]
+    }
+  }
+}

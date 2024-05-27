@@ -1,0 +1,5 @@
+{
+	"name": "BrowseIt",
+	"image": "mcr.microsoft.com/devcontainers/base:alpine",
+	"postCreateCommand": "sudo apk update && sudo apk add npm && sudo npm install -g @vscode/vsce"
+}
