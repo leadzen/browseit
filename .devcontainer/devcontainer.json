@@ -1,5 +1,9 @@
 {
 	"name": "BrowseIt",
 	"image": "mcr.microsoft.com/devcontainers/base:alpine",
-	"postCreateCommand": "sudo apk update && sudo apk add npm && sudo npm install -g @vscode/vsce"
+	"postCreateCommand": "sudo apk update && sudo apk add npm && sudo npm install -g @vscode/vsce",
+	"mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,readonly",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.git,target=/home/vscode/.git,type=bind,readonly"
+  ]
 }
