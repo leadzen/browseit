@@ -1,7 +1,7 @@
 {
-  "name": "browse-it",
+  "name": "Browse It",
   "version": "0.0.1",
-  "displyName": "Browse It",
+  "displyName": "Browse It from VS Code",
   "description": "VS Code extension for browsing files.",
   "publisher": "leadzen",
   "categories": ["Other"],
