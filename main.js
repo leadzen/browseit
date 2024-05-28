@@ -70,9 +70,7 @@ function createServer(root, terminal) {
       var stat = fs.statSync(fullpath, { throwIfNoEntry: false });
       if (stat && !stat.isDirectory()) {
         var type = mime[path.extname(fullpath).slice(1)];
-        if (type) {
-          response.setHeader("Content-Type", type + "; charset=utf-8");
-        }
+        response.setHeader("Content-Type", type);
         fs.createReadStream(fullpath).pipe(response);
       }
       else {

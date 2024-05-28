@@ -1,6 +1,6 @@
 {
   "name": "browse-it",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "displayName": "Browse It from VS Code",
   "description": "VS Code extension for browsing files.",
   "publisher": "leadzen",
@@ -15,12 +15,13 @@
   "activationEvents": [],
   "contributes": {
     "commands": [
-      {"command": "browse.it", "title": "Browser It"}
+      {"command": "browse.it", "title": "Browser It", "icon": { "dark": "./icon.png", "light": "./icon.png" }}
     ],
     "menus": {
-      "editor/context": [
-        {"command": "browse.it", "when": "resourceScheme == file"}
-      ]
+      "editor/context": [{"command": "browse.it"}],
+      "editor/title": [{"command": "browse.it"}],
+      "editor/title/context": [{"command": "browse.it"}],
+      "explorer/context": [{"command": "browse.it"}]
     }
   }
 }
