@@ -63,7 +63,7 @@ function createServer(root, terminal) {
 
   function service(request, response) {
     try {
-      var pathname = request.url;
+      var pathname = decodeURI(request.url);
       if (path.sep === '\\')
         pathname = pathname.replace(/\//g, '\\');
       var fullpath = root + pathname;
